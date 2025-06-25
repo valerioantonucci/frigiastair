@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video 2</title>
+  <style>
+    body { display: flex; align-items: center; justify-content: center; height: 100vh; background: #000; margin: 0; }
+    .play-button { background-color: red; color: white; font-size: 4em; padding: 0.4em 1em; border: none; border-radius: 0.3em; cursor: pointer; }
+    iframe { display: none; width: 90vw; height: 50vw; max-width: 960px; max-height: 540px; }
+  </style>
+</head>
+<body>
+  <button class="play-button" onclick="playVideo()">▶</button>
+  <iframe id="ytplayer" src="https://www.youtube.com/embed/HgzGwKwLmgM?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  <script>
+    function playVideo() {
+      document.querySelector('.play-button').style.display = 'none';
+      document.getElementById('ytplayer').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
